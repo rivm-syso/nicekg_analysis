@@ -1,0 +1,16 @@
+name: nicekg_analysis
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11
+  - pandas
+  - rdflib
+  - seaborn
+  - sparqlwrapper
+  - matplotlib
+  - ca-certificates
+  - openssl
+  - venn
+  - ipykernel
+prefix: /mnt/scratch_dir/bindtf/conda/envs/nicekg_analysis

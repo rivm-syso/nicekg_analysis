@@ -1,0 +1,19 @@
+.env
+*.egg-info/
+__pycache__/
+*.json
+*.ipynb_checkpoints
+to_do_check.txt
+.conda
+local_path.py 
+#.pre-commit-config.yaml
+setup.cfg 
+
+
+# Ignore Python cache directories
+__pycache__/
+**/__pycache__/
+
+# Ignore Jupyter notebook checkpoints
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
