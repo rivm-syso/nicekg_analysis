@@ -26,6 +26,7 @@ keywords:
   - Chemical Food Safety
   - Food Life Cycle Analysis
 license: EUPL-1.2
+version: 1.0.0
 contact:
   - affiliation: "National Institute for Public Health and the Environment"
     email: felix.bindt@rivm.nl
