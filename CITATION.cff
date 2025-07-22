@@ -1,6 +1,5 @@
 # This CITATION.cff file was generated with cffinit.
 # Visit https://bit.ly/cffinit to generate yours today!
-
 cff-version: 1.2.0
 title: NICE_Food analysis
 message: >-
@@ -30,4 +29,5 @@ keywords:
 license: EUPL-1.2
 version: 1.0.0
 
-
+doi: 10.21945/671b26b5-d707-4731-823b-faa1c2675516
+date-released: 2025-07-22
