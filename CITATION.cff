@@ -8,12 +8,14 @@ message: >-
   metadata from this file.
 type: software
 authors:
-  - name: National Institute For public health and
-    address: Antonie van Leeuwenhoeklaan 9
-    city: Bilthoven
-    country: NL
-    post-code: ' 3721 MA'
-    website: 'https://www.rivm.nl/'
+  - affiliation: "National Institute for Public Health and the Environment"
+    email: felix.bindt@rivm.nl
+    family-names: Bindt
+    given-names: Felix
+  - affiliation: "National Institute for Public Health and the Environment"
+    email: jens.ruhof@rivm.nl
+    family-names: Ruhof
+    given-names: Jens
 repository-code: 'https://github.com/rivm-syso/nicekg_processing'
 abstract: >
   This work describes the code for recreating the figures
@@ -27,12 +29,5 @@ keywords:
   - Food Life Cycle Analysis
 license: EUPL-1.2
 version: 1.0.0
-contact:
-  - affiliation: "National Institute for Public Health and the Environment"
-    email: felix.bindt@rivm.nl
-    family-names: Bindt
-    given-names: Felix
-  - affiliation: "National Institute for Public Health and the Environment"
-    email: jens.ruhof@rivm.nl
-    family-names: Ruhof
-    given-names: Jens
+
+
