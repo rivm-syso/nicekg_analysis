@@ -4,6 +4,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX ncbitaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX nevo: <http://www.foodvoc.org/resource/nevo#>
 PREFIX fobi: <http://purl.obolibrary.org/obo/FOBI>
 PREFIX obo: <http://purl.obolibrary.org/obo/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
@@ -16,7 +17,7 @@ PREFIX foodon: <http://purl.obolibrary.org/obo/FOODON>
 
 
 # Add derives from for complete view. 
-SELECT ?ncbilabel ?classlabel ?queryclasslabel ?ingredientlabel ?restriction_ex ?any_taxon ?fooditem
+SELECT ?ncbilabel ?classlabel ?queryclasslabel ?ingredientlabel ?restriction_ex ?any_taxon 
 WHERE { {
     ?fooditem rdf:type ?queryclass . 
     ?fooditem rdf:type fio:FoodItem . 
@@ -32,7 +33,7 @@ WHERE { {
     ?any_taxon rdfs:subClassOf* obo:NCBITaxon_33090 .  # from green plants
     ?class  rdfs:subClassOf ?restriction1 .  
   	?class rdfs:label ?classlabel . 
-    BIND("in taxon relation" as ?restriction_ex)
+#    BIND("in taxon relation" as ?restriction_ex)
     } UNION {    
     ?fooditem rdf:type ?queryclass . 
     ?fooditem rdf:type fio:FoodItem . 
@@ -46,7 +47,7 @@ WHERE { {
                owl:someValuesFrom ?any_taxon .
   	?any_taxon rdfs:label ?ncbilabel . 
     ?any_taxon rdfs:subClassOf* obo:NCBITaxon_33090 .  # from green plants
-    BIND("derives from" as ?restriction_ex)
+#    BIND("derives from" as ?restriction_ex)
     ?class  rdfs:subClassOf ?restriction2 .  
   	?class rdfs:label ?classlabel . }
 } 

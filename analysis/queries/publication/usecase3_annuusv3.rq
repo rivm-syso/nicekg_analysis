@@ -1,0 +1,278 @@
+PREFIX kap_param: <https://data.rivm.nl/data/nvip/bigfood/kap/parameter#>
+PREFIX : <http://purl.obolibrary.org/obo/foodon.owl#>
+PREFIX ncbi: <https://www.ncbi.nlm.nih.gov/>
+PREFIX ro: <http://purl.obolibrary.org/obo/RO>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ncbitaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX nevo: <http://www.foodvoc.org/resource/nevo#>
+PREFIX fobi: <http://purl.obolibrary.org/obo/FOBI>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX leda: <http://example.org/temporary_identifier/LEDA#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX fio: <http://www.foodvoc.org/resource/fio#>
+PREFIX om: <http://www.ontology-of-units-of-measure.org/resource/om-2/>
+PREFIX saref: <https://saref.etsi.org/core/>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX foodon: <http://purl.obolibrary.org/obo/FOODON>
+
+SELECT distinct ?ncbilabel ?class ?classlabel ?queryclasslabel ?datasetlabel ?dataavailable
+WHERE {
+
+### ---------------------------------------------------------------------------
+### 1) EXISTING TAXON RESTRICTION: ro:_0001000
+### ---------------------------------------------------------------------------
+
+  {  # Structure only
+    ?restriction rdf:type owl:Restriction ;
+                 owl:onProperty ro:_0001000 ;
+                 owl:someValuesFrom ncbitaxon:4232 .
+    ncbitaxon:4232 rdfs:label ?ncbilabel .
+    ?class rdfs:subClassOf ?restriction .
+    ?class rdfs:label ?classlabel .
+    ?queryclass rdfs:subClassOf* ?class .
+    ?queryclass rdfs:label ?queryclasslabel .
+  }
+
+  UNION
+
+  {  # FoodItem + Impact data
+    ?restriction rdf:type owl:Restriction ;
+                 owl:onProperty ro:_0001000 ;
+                 owl:someValuesFrom ncbitaxon:4232 .
+    ncbitaxon:4232 rdfs:label ?ncbilabel .
+    ?class rdfs:subClassOf ?restriction .
+    ?class rdfs:label ?classlabel .
+    ?queryclass rdfs:subClassOf* ?class .
+    ?queryclass rdfs:label ?queryclasslabel .
+    ?variable rdf:type fio:FoodItem ;
+              rdf:type ?queryclass ;
+              fio:hasImpact ?impact ;
+              rdfs:label ?datasetlabel .
+    FILTER(lang(?datasetlabel)="en")
+    BIND("LCA data available" as ?dataavailable)
+  }
+
+  UNION
+
+  {  # Nutritional value
+    ?restriction rdf:type owl:Restriction ;
+                 owl:onProperty ro:_0001000 ;
+                 owl:someValuesFrom ncbitaxon:4232 .
+    ncbitaxon:4232 rdfs:label ?ncbilabel .
+    ?class rdfs:subClassOf ?restriction .
+    ?class rdfs:label ?classlabel .
+    ?queryclass rdfs:subClassOf* ?class .
+    ?queryclass rdfs:label ?queryclasslabel .
+    ?variable rdf:type fio:FoodItem ;
+              rdf:type ?queryclass ;
+              skos:prefLabel ?datasetlabel ;
+              fio:hasNutritionalValue ?nutrient .
+    FILTER(lang(?datasetlabel)="en")
+    BIND("Nutrient data available" as ?dataavailable)
+  }
+
+  UNION
+
+  {  # Chemical food safety
+    ?restriction rdf:type owl:Restriction ;
+                 owl:onProperty ro:_0001000 ;
+                 owl:someValuesFrom ncbitaxon:4232 .
+    ncbitaxon:4232 rdfs:label ?ncbilabel .
+    ?class rdfs:subClassOf ?restriction .
+    ?class rdfs:label ?classlabel .
+    ?queryclass rdfs:subClassOf* ?class .
+    ?queryclass rdfs:label ?queryclasslabel .
+    ?variable rdf:type sosa:FeatureOfInterest ;
+              rdf:type ?queryclass ;
+              kap_param:hasKapName ?datasetlabel .
+    FILTER(lang(?datasetlabel)="en")
+    BIND("Chemical foodsafety data available" as ?dataavailable)
+  }
+
+### ---------------------------------------------------------------------------
+### 2) NEW TAXON RESTRICTION: ro:_0002162
+### ---------------------------------------------------------------------------
+
+  UNION
+
+  {  # Structure only
+    ?restriction rdf:type owl:Restriction ;
+                 owl:onProperty ro:_0002162 ;
+                 owl:someValuesFrom ncbitaxon:4232 .
+    ncbitaxon:4232 rdfs:label ?ncbilabel .
+    ?class rdfs:subClassOf ?restriction .
+    ?class rdfs:label ?classlabel .
+    ?queryclass rdfs:subClassOf* ?class .
+    ?queryclass rdfs:label ?queryclasslabel .
+  }
+
+  UNION
+
+  {  # FoodItem + Impact data
+    ?restriction rdf:type owl:Restriction ;
+                 owl:onProperty ro:_0002162 ;
+                 owl:someValuesFrom ncbitaxon:4232 .
+    ncbitaxon:4232 rdfs:label ?ncbilabel .
+    ?class rdfs:subClassOf ?restriction .
+    ?class rdfs:label ?classlabel .
+    ?queryclass rdfs:subClassOf* ?class .
+    ?queryclass rdfs:label ?queryclasslabel .
+    ?variable rdf:type fio:FoodItem ;
+              rdf:type ?queryclass ;
+              fio:hasImpact ?impact ;
+              rdfs:label ?datasetlabel .
+    FILTER(lang(?datasetlabel)="en")
+    BIND("LCA data available" as ?dataavailable)
+  }
+
+  UNION
+
+  {  # Nutritional value
+    ?restriction rdf:type owl:Restriction ;
+                 owl:onProperty ro:_0002162 ;
+                 owl:someValuesFrom ncbitaxon:4232 .
+    ncbitaxon:4232 rdfs:label ?ncbilabel .
+    ?class rdfs:subClassOf ?restriction .
+    ?class rdfs:label ?classlabel .
+    ?queryclass rdfs:subClassOf* ?class .
+    ?queryclass rdfs:label ?queryclasslabel .
+    ?variable rdf:type fio:FoodItem ;
+              rdf:type ?queryclass ;
+              skos:prefLabel ?datasetlabel ;
+              fio:hasNutritionalValue ?nutrient .
+    FILTER(lang(?datasetlabel)="en")
+    BIND("Nutrient data available" as ?dataavailable)
+  }
+
+  UNION
+
+  {  # Chemical foodsafety
+    ?restriction rdf:type owl:Restriction ;
+                 owl:onProperty ro:_0002162 ;
+                 owl:someValuesFrom ncbitaxon:4232 .
+    ncbitaxon:4232 rdfs:label ?ncbilabel .
+    ?class rdfs:subClassOf ?restriction .
+    ?class rdfs:label ?classlabel .
+    ?queryclass rdfs:subClassOf* ?class .
+    ?queryclass rdfs:label ?queryclasslabel .
+    ?variable rdf:type sosa:FeatureOfInterest ;
+              rdf:type ?queryclass ;
+              kap_param:hasKapName ?datasetlabel .
+    FILTER(lang(?datasetlabel)="en")
+    BIND("Chemical foodsafety data available" as ?dataavailable)
+  }
+
+### ---------------------------------------------------------------------------
+### 3) NEW DOUBLE RESTRICTION: 2162 taxon + 01000 food
+### ---------------------------------------------------------------------------
+
+  UNION
+
+  {  # Structure only
+    ?restriction rdf:type owl:Restriction ;
+                 owl:onProperty ro:_0002162 ;
+                 owl:someValuesFrom ncbitaxon:4232 .
+    ncbitaxon:4232 rdfs:label ?ncbilabel .
+
+    ?otherFoodOn rdfs:subClassOf ?restriction .
+
+    ?restriction2 a owl:Restriction ;
+                  owl:onProperty ro:_0001000 ;
+                  owl:someValuesFrom ?otherFoodOn .
+
+    ?class rdfs:subClassOf ?restriction2 ;
+           rdfs:label ?classlabel .
+
+    ?queryclass rdfs:subClassOf* ?class ;
+                rdfs:label ?queryclasslabel .
+  }
+
+  UNION
+
+  {  # LCA data
+    ?restriction rdf:type owl:Restriction ;
+                 owl:onProperty ro:_0002162 ;
+                 owl:someValuesFrom ncbitaxon:4232 .
+    ncbitaxon:4232 rdfs:label ?ncbilabel .
+
+    ?otherFoodOn rdfs:subClassOf ?restriction .
+
+    ?restriction2 a owl:Restriction ;
+                  owl:onProperty ro:_0001000 ;
+                  owl:someValuesFrom ?otherFoodOn .
+
+    ?class rdfs:subClassOf ?restriction2 ;
+           rdfs:label ?classlabel .
+
+    ?queryclass rdfs:subClassOf* ?class ;
+                rdfs:label ?queryclasslabel .
+
+    ?variable rdf:type fio:FoodItem ;
+              rdf:type ?queryclass ;
+              fio:hasImpact ?impact ;
+              rdfs:label ?datasetlabel .
+    FILTER(lang(?datasetlabel)="en")
+    BIND("LCA data available" AS ?dataavailable)
+  }
+
+  UNION
+
+  {  # Nutrient data
+    ?restriction rdf:type owl:Restriction ;
+                 owl:onProperty ro:_0002162 ;
+                 owl:someValuesFrom ncbitaxon:4232 .
+    ncbitaxon:4232 rdfs:label ?ncbilabel .
+
+    ?otherFoodOn rdfs:subClassOf ?restriction .
+
+    ?restriction2 a owl:Restriction ;
+                  owl:onProperty ro:_0001000 ;
+                  owl:someValuesFrom ?otherFoodOn .
+
+    ?class rdfs:subClassOf ?restriction2 ;
+           rdfs:label ?classlabel .
+
+    ?queryclass rdfs:subClassOf* ?class ;
+                rdfs:label ?queryclasslabel .
+
+    ?variable rdf:type fio:FoodItem ;
+              rdf:type ?queryclass ;
+              skos:prefLabel ?datasetlabel ;
+              fio:hasNutritionalValue ?nutrient .
+
+    FILTER(lang(?datasetlabel)="en")
+    BIND("Nutrient data available" AS ?dataavailable)
+  }
+
+  UNION
+
+  {  # Chemical foodsafety
+    ?restriction rdf:type owl:Restriction ;
+                 owl:onProperty ro:_0002162 ;
+                 owl:someValuesFrom ncbitaxon:4232 .
+    ncbitaxon:4232 rdfs:label ?ncbilabel .
+
+    ?otherFoodOn rdfs:subClassOf ?restriction .
+
+    ?restriction2 a owl:Restriction ;
+                  owl:onProperty ro:_0001000 ;
+                  owl:someValuesFrom ?otherFoodOn .
+
+    ?class rdfs:subClassOf ?restriction2 ;
+           rdfs:label ?classlabel .
+
+    ?queryclass rdfs:subClassOf* ?class ;
+                rdfs:label ?queryclasslabel .
+
+    ?variable rdf:type sosa:FeatureOfInterest ;
+              rdf:type ?queryclass ;
+              kap_param:hasKapName ?datasetlabel .
+
+    FILTER(lang(?datasetlabel)="en")
+    BIND("Chemical foodsafety data available" AS ?dataavailable)
+  }
+
+}
+ORDER BY DESC(?datasetlabel)

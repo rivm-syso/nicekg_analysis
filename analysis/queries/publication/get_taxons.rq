@@ -1,0 +1,105 @@
+PREFIX ncbi: <https://www.ncbi.nlm.nih.gov/>
+PREFIX ro: <http://purl.obolibrary.org/obo/RO_>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ncbitaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX fobi: <http://purl.obolibrary.org/obo/FOBI>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX fio: <http://www.foodvoc.org/resource/fio#>
+PREFIX om: <http://www.ontology-of-units-of-measure.org/resource/om-2/>
+PREFIX saref: <https://saref.etsi.org/core/>
+PREFIX kap: <http://example.org/>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX foodon: <http://purl.obolibrary.org/obo/FOODON>
+
+
+# Add derives from for complete view. 
+SELECT ?ncbilabel ?classlabel ?queryclasslabel ?ingredientlabel ?restriction_ex ?any_taxon ?fooditem
+WHERE { {
+    # Extract ingredients that have a superclass "derive from" taxon relationship
+    # Get the ingredient    
+    ?fooditem rdf:type ?queryclass; 
+     			rdf:type fio:FoodItem;  
+     			fobi:_00425 ?anyproduct ;     
+     			rdfs:label ?ingredientlabel . 
+    FILTER(lang(?ingredientlabel) = "en") 
+    
+    # Rertrieve all superclasses     
+    ?queryclass rdfs:subClassOf* ?class . 
+   	?queryclass rdfs:label ?queryclasslabel .
+        
+        
+    # Get the derive from taxon of superclass 
+  	?restriction1 rdf:type owl:Restriction ;
+               owl:onProperty ro:0001000 ; #derive from
+               owl:someValuesFrom ?any_taxon .
+   
+    # Filter on only ncbi taxon green plants
+  	?any_taxon rdfs:label ?ncbilabel . 
+    ?any_taxon rdfs:subClassOf* obo:NCBITaxon_33090 .  # from green plants
+    
+    # The superclass needs to ahve the restriction
+    ?class  rdfs:subClassOf ?restriction1 .  
+  	?class rdfs:label ?classlabel . 
+    BIND("derive from" as ?restriction_ex)
+    } UNION {    
+    # Extract ingredients that have a superclass "in taxon" relationship       
+    ?fooditem rdf:type ?queryclass; 
+     			rdf:type fio:FoodItem;  
+     			fobi:_00425 ?anyproduct ;     
+     			rdfs:label ?ingredientlabel . 
+    FILTER(lang(?ingredientlabel) = "en")  
+    
+    # Get all superclasses    
+    ?queryclass rdfs:subClassOf* ?class . 
+   	?queryclass rdfs:label ?queryclasslabel .
+        
+    # Prepare the restriction if any of the superclasses has in taxon relationship    
+  	?restriction2 rdf:type owl:Restriction ;
+               owl:onProperty ro:0002162 ; #in taxon
+               owl:someValuesFrom ?any_taxon .
+    
+    # Get taxon label and filter on only green plants    
+  	?any_taxon rdfs:label ?ncbilabel . 
+    ?any_taxon rdfs:subClassOf* obo:NCBITaxon_33090 .  # from green plants
+    
+    # Actually check if any of the ingredietns have the in taxon relationship    
+    ?class  rdfs:subClassOf ?restriction2 .  
+  	?class rdfs:label ?classlabel .     
+        
+    BIND("in taxon" as ?restriction_ex)
+    } UNION {
+    # Get the specific food item
+    ?fooditem rdf:type ?queryclass; 
+     			rdf:type fio:FoodItem;  
+     			fobi:_00425 ?anyproduct ;     
+     			rdfs:label ?ingredientlabel . 
+    FILTER(lang(?ingredientlabel) = "en")   
+
+    # Get class hierarchy
+    ?queryclass rdfs:subClassOf* ?class .
+    ?queryclass rdfs:label ?queryclasslabel .
+
+    #blank node for derived products
+    ?class a owl:Restriction; 
+    		 owl:onProperty ro:0001000;  # derives from
+    		 owl:someValuesFrom ?otherFoodOn .
+	
+    #blank node to get to taxon
+    ?restriction3 a owl:Restriction;
+     			owl:onProperty ro:0002162; # in taxon from
+    			owl:someValuesFrom ?any_taxon . 
+        
+    ?otherFoodOn rdfs:subClassOf ?restriction3 . 
+    ?otherFoodOn rdfs:label ?classlabel .    
+    ?any_taxon rdfs:subClassOf* obo:NCBITaxon_33090 .
+    ?any_taxon rdfs:label ?ncbilabel . 
+    BIND("prdocut derived from" as ?restriction_ex)   
+	}
+ }
+            
+
+    
+    

@@ -3,14 +3,19 @@ channels:
   - conda-forge
   - bioconda
 dependencies:
-  - python=3.11
+  - ca-certificates
+  - ipykernel
+  - matplotlib
+  - openssl
   - pandas
+  - python=3.11
   - rdflib
   - seaborn
   - sparqlwrapper
-  - matplotlib
-  - ca-certificates
-  - openssl
   - venn
-  - ipykernel
-prefix: /mnt/scratch_dir/bindtf/conda/envs/nicekg_analysis
+  - tqdm
+  - python-dotenv
+  - pycountry
+  - openai
+  - networkx
+

@@ -1,0 +1,74 @@
+PREFIX nevo: <http://www.foodvoc.org/resource/nevo#>
+PREFIX fobi: <http://purl.obolibrary.org/obo/FOBI>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX leda: <http://example.org/temporary_identifier/LEDA#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX fio: <http://www.foodvoc.org/resource/fio#>
+PREFIX om: <http://www.ontology-of-units-of-measure.org/resource/om-2/>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX foodon: <http://purl.obolibrary.org/obo/FOODON>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT distinct ?foodname ?proteinvalue
+            ?nutunit ?impactfoodname ?warmingvalue ?impactunit ?impacttype ?impacttypelabel
+            
+WHERE {
+  {
+   SELECT  ?grouplabel ?foodname ?nutrientclasslabel ?proteinvalue
+            ?nutunit ?impacttype  WHERE {
+     {
+        ?foodontype rdfs:subClassOf* foodon:_00001015 .
+        BIND("Plant food product" AS ?grouplabel)
+    }
+    	FILTER NOT EXISTS {
+        ?foodontype rdfs:subClassOf* foodon:_00002265  . # Assuming foodon:00001239 refers to soy
+    }
+    
+    # Retrieve NEVO
+    ?food_item rdf:type fio:FoodItem . 
+    ?food_item rdf:type ?foodontype . 
+    ?food_item skos:prefLabel ?foodname . 
+    FILTER(LANG(?foodname) = "en") 
+    ?food_item fio:hasNutritionalValue ?nutvalue . 
+    ?nutvalue fio:hasNutrient nevo:PROT .
+    ?nutvalue fio:hasNutrient ?nutclass . 
+    ?nutclass rdf:type ?nutclasstype  . 
+    ?nutclasstype rdfs:label ?nutrientclasslabel . 
+    ?nutvalue om:hasValue ?valuelink .    
+    ?valuelink om:hasNumericalValue ?proteinvalue . 
+    FILTER(?proteinvalue >= 20) 
+    ?valuelink om:hasUnit ?nutunit .
+    ?foodontype rdfs:subClassOf ?ancestor . 
+    FILTER (isIRI(?ancestor))
+	?impacttype rdfs:subClassOf* ?ancestor . 
+  	FILTER(isIRI(?impacttype)) 
+            
+  } 
+  }
+  
+  { SELECT ?impactfoodname ?warmingvalue ?impactunit ?impacttype ?impacttypelabel WHERE  {
+  
+     {
+        ?impacttype rdfs:subClassOf* foodon:_00001015 .
+        BIND("Plant food product" AS ?grouplabel)
+    }
+    	FILTER NOT EXISTS {
+        ?impacttype rdfs:subClassOf* foodon:_00002265  . # Assuming foodon:00001239 refers to soy
+    }
+    
+    ?food_item rdf:type fio:FoodItem . 
+    ?food_item rdf:type ?impacttype . 
+    ?food_item rdfs:label ?impactfoodname . 
+    ?food_item fio:hasImpact ?impact . 
+    FILTER(LANG(?impactfoodname) = "en") 
+    ?impact om:hasValue ?impactvalue . 
+    ?impact rdfs:label "Global warming"@en . 
+    ?impact rdfs:label ?impactlabel . 
+    ?impactvalue om:hasNumericalValue ?warmingvalue . 
+    ?impactvalue om:hasUnit ?impactunit . 
+    ?impacttype rdfs:label ?impacttypelabel
+} 
+}
+	FILTER(BOUND(?impacttype))
+} ORDER BY DESC(?nutnumvalue) DESC(?foodname) DESC(?warmingvalue)

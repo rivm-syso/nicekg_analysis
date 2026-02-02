@@ -1,0 +1,99 @@
+ncbilabel,classlabel,queryclasslabel,ingredientlabel,restriction_ex,any_taxon,fooditem
+Cocos nucifera,coconut food product,coconut oil,coconut oil,derive from,http://purl.obolibrary.org/obo/NCBITaxon_13894,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#10coconut_oil
+Cocos nucifera,coconut food product,coconut oil,coconut oil,derive from,http://purl.obolibrary.org/obo/NCBITaxon_13894,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#13coconut_oil
+Avena sativa,oat food product,oat fibre,oat fiber,derive from,http://purl.obolibrary.org/obo/NCBITaxon_4498,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#15oat_fiber
+Avena sativa,oat food product,oat fibre,oat fiber,derive from,http://purl.obolibrary.org/obo/NCBITaxon_4498,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#5oat_fiber
+Avena sativa,oat food product,oat fibre,oat fiber,derive from,http://purl.obolibrary.org/obo/NCBITaxon_4498,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#9oat_fiber
+Helianthus annuus,sunflower food product,sunflower seed oil,sunflower oil,derive from,http://purl.obolibrary.org/obo/NCBITaxon_4232,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#0sunflower_oil
+Helianthus annuus,sunflower food product,sunflower seed oil,sunflower oil,derive from,http://purl.obolibrary.org/obo/NCBITaxon_4232,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#11sunflower_oil
+Helianthus annuus,sunflower food product,sunflower seed oil,sunflower oil,derive from,http://purl.obolibrary.org/obo/NCBITaxon_4232,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#12sunflower_oil
+Helianthus annuus,sunflower food product,sunflower seed oil,sunflower oil,derive from,http://purl.obolibrary.org/obo/NCBITaxon_4232,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#13sunflower_oil
+Helianthus annuus,sunflower food product,sunflower seed oil,sunflower oil,derive from,http://purl.obolibrary.org/obo/NCBITaxon_4232,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#15sunflower_oil
+Helianthus annuus,sunflower food product,sunflower seed oil,sunflower oil,derive from,http://purl.obolibrary.org/obo/NCBITaxon_4232,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#17sunflower_oil
+Helianthus annuus,sunflower food product,sunflower seed oil,sunflower oil,derive from,http://purl.obolibrary.org/obo/NCBITaxon_4232,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#18sunflower_oil
+Helianthus annuus,sunflower food product,sunflower seed oil,sunflower oil,derive from,http://purl.obolibrary.org/obo/NCBITaxon_4232,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#1sunflower_oil
+Helianthus annuus,sunflower food product,sunflower seed oil,sunflower oil,derive from,http://purl.obolibrary.org/obo/NCBITaxon_4232,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#5sunflower_oil
+Helianthus annuus,sunflower food product,sunflower seed oil,sunflower oil,derive from,http://purl.obolibrary.org/obo/NCBITaxon_4232,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#9sunflower_oil
+Helianthus annuus,sunflower food product,sunflower seed protein,sunflower seed protein,derive from,http://purl.obolibrary.org/obo/NCBITaxon_4232,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#13sunflower_seed_protein
+Apium graveolens,celery food product,celery food product,celery,derive from,http://purl.obolibrary.org/obo/NCBITaxon_4045,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#18celery
+Cyamopsis tetragonoloba,guar plant food product,guar gum,guar gum,derive from,http://purl.obolibrary.org/obo/NCBITaxon_3832,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#0guar_gum
+Cyamopsis tetragonoloba,guar plant food product,guar gum,guar gum,derive from,http://purl.obolibrary.org/obo/NCBITaxon_3832,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#1guar_gum
+Zea mays subsp. mays,vegetable corn food product,corn flakes,cornflakes,derive from,http://purl.obolibrary.org/obo/NCBITaxon_381124,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#5cornflakes
+Glycine max,soybean seed (field) food product,soybean,soybeans,derive from,http://purl.obolibrary.org/obo/NCBITaxon_3847,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#0soybeans
+Glycine max,soybean seed (field) food product,soybean,soybeans,derive from,http://purl.obolibrary.org/obo/NCBITaxon_3847,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#1soybeans
+Glycine max,soybean seed (field) food product,soybean,soybeans,derive from,http://purl.obolibrary.org/obo/NCBITaxon_3847,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#20soybeans
+Glycine max,soybean seed (field) food product,soy chunks,soy chunks,derive from,http://purl.obolibrary.org/obo/NCBITaxon_3847,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#8soy_chunks
+Glycine max,soybean seed (field) food product,soy structure,soy structure,derive from,http://purl.obolibrary.org/obo/NCBITaxon_3847,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#4soy_structure
+Glycine max,soybean seed (field) food product,soy structure,soy structure,derive from,http://purl.obolibrary.org/obo/NCBITaxon_3847,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#5soy_structure
+Glycine max,soybean seed (field) food product,soy structure,soy structure,derive from,http://purl.obolibrary.org/obo/NCBITaxon_3847,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#6soy_structure
+Fabaceae,legume,pea,peas,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_3803,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#0peas
+Fabaceae,legume,pea,peas,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_3803,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#18peas
+Fabaceae,legume,chickpea,chickpeas,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_3803,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#7chickpeas
+Fabaceae,legume,soybean,soybeans,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_3803,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#0soybeans
+Fabaceae,legume,soybean,soybeans,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_3803,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#1soybeans
+Fabaceae,legume,soybean,soybeans,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_3803,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#20soybeans
+Allium sativum,garlic clove,garlic clove,garlic,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_4682,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#11garlic
+Allium sativum,garlic clove,garlic clove,garlic,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_4682,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#1garlic
+Allium sativum,garlic clove,garlic clove,garlic,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_4682,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#6garlic
+Allium sativum,garlic clove,garlic clove,garlic,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_4682,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#7garlic
+Allium schoenoprasum,chive leaf,chive leaf,chives,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_74900,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#15chives
+Allium schoenoprasum,chive leaf,chive leaf,chives,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_74900,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#18chives
+Allium cepa,onion,onion,onion,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_4679,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#0onion
+Allium cepa,onion,onion,sliced onion,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_4679,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#12sliced_onion
+Allium cepa,onion,onion,onion,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_4679,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#15onion
+Allium cepa,onion,onion,onion,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_4679,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#18onion
+Allium cepa,onion,onion,onion,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_4679,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#1onion
+Allium cepa,onion,onion,onion,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_4679,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#4onion
+Allium cepa,onion,onion,onion,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_4679,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#6onion
+Allium cepa,onion,onion,onion,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_4679,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#7onion
+Spinacia oleracea,spinach (whole or pieces),spinach (whole or pieces),spinach,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_3562,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#18spinach
+Spinacia oleracea,spinach (whole or pieces),spinach (whole or pieces),spinach,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_3562,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#7spinach
+Capsicum,pepper,pepper,pepper,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_4071,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#0pepper
+Capsicum,pepper,pepper,pepper,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_4071,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#1pepper
+Solanum lycopersicum,tomato,tomato,tomato,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_4081,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#11tomato
+Coriandrum sativum,coriander (whole or pieces),coriander (whole or pieces),coriander,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_4047,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#7coriander
+Ocimum basilicum,basil (whole or pieces),basil (whole or pieces),basil,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_39350,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#15basil
+Pastinaca sativa,parsnip,parsnip,parsnip,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_4041,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#1parsnip
+Petroselinum crispum,parsley (whole or pieces),parsley (whole or pieces),parsley,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_4043,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#7parsley
+Zea mays subsp. mays,maize kernel,maize kernel,corn,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_381124,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#0corn
+Zea mays subsp. mays,maize kernel,maize kernel,corn,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_381124,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#5corn
+Glycine max,soybean,soybean,soybeans,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_3847,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#0soybeans
+Glycine max,soybean,soybean,soybeans,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_3847,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#1soybeans
+Glycine max,soybean,soybean,soybeans,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_3847,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#20soybeans
+Cicer arietinum,chickpea,chickpea,chickpeas,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_3827,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#7chickpeas
+Pisum sativum,pea,pea,peas,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_3888,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#0peas
+Pisum sativum,pea,pea,peas,in taxon,http://purl.obolibrary.org/obo/NCBITaxon_3888,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#18peas
+Allium schoenoprasum,chive plant,chive leaf,chives,product derived from other product,http://purl.obolibrary.org/obo/NCBITaxon_74900,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#15chives
+Allium schoenoprasum,chive plant,chive leaf,chives,product derived from other product,http://purl.obolibrary.org/obo/NCBITaxon_74900,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#18chives
+Capsicum,pepper,pepper,pepper,product derived from other product,http://purl.obolibrary.org/obo/NCBITaxon_4071,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#0pepper
+Capsicum,pepper,pepper,pepper,product derived from other product,http://purl.obolibrary.org/obo/NCBITaxon_4071,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#1pepper
+Solanum lycopersicum,tomato,tomato,tomato,product derived from other product,http://purl.obolibrary.org/obo/NCBITaxon_4081,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#11tomato
+Solanum lycopersicum,tomato,tomato paste,tomato paste,product derived from other product,http://purl.obolibrary.org/obo/NCBITaxon_4081,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#0tomato_paste
+Solanum lycopersicum,tomato,tomato paste,tomato paste,product derived from other product,http://purl.obolibrary.org/obo/NCBITaxon_4081,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#13tomato_paste
+Solanum lycopersicum,tomato,tomato flakes,tomato flakes,product derived from other product,http://purl.obolibrary.org/obo/NCBITaxon_4081,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#11tomato_flakes
+Solanum tuberosum,potato,potato starch,potato starch,product derived from other product,http://purl.obolibrary.org/obo/NCBITaxon_4113,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#13potato_starch
+Solanum tuberosum,potato,potato starch,potato starch,product derived from other product,http://purl.obolibrary.org/obo/NCBITaxon_4113,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#19potato_starch
+Solanum tuberosum,potato,potato starch,potato starch,product derived from other product,http://purl.obolibrary.org/obo/NCBITaxon_4113,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#1potato_starch
+Solanum tuberosum,potato,potato protein,potato protein,product derived from other product,http://purl.obolibrary.org/obo/NCBITaxon_4113,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#0potato_protein
+Oryza sativa,rice plant,rice flour,rice flour,product derived from other product,http://purl.obolibrary.org/obo/NCBITaxon_4530,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#19rice_flour
+Oryza sativa,rice plant,rice,rice,product derived from other product,http://purl.obolibrary.org/obo/NCBITaxon_4530,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#5rice
+Secale cereale,rye plant,rye flour,rye flour,product derived from other product,http://purl.obolibrary.org/obo/NCBITaxon_4550,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#10rye_flour
+Hordeum vulgare,barley plant,barley malt,barley malt,product derived from other product,http://purl.obolibrary.org/obo/NCBITaxon_4513,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#1barley_malt
+Hordeum vulgare,barley plant,barley malt extract,barley malt extract,product derived from other product,http://purl.obolibrary.org/obo/NCBITaxon_4513,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#11barley_malt_extract
+Hordeum vulgare,barley plant,barley malt extract,barley malt extract,product derived from other product,http://purl.obolibrary.org/obo/NCBITaxon_4513,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#6barley_malt_extract
+Zea mays,Zia mays plant,maize kernel,corn,product derived from other product,http://purl.obolibrary.org/obo/NCBITaxon_4577,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#0corn
+Zea mays,Zia mays plant,maize kernel,corn,product derived from other product,http://purl.obolibrary.org/obo/NCBITaxon_4577,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#5corn
+Zea mays,Zia mays plant,corn flakes,cornflakes,product derived from other product,http://purl.obolibrary.org/obo/NCBITaxon_4577,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#5cornflakes
+Glycine max,soybean,soy protein,soy protein,product derived from other product,http://purl.obolibrary.org/obo/NCBITaxon_3847,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#0soy_protein
+Glycine max,soybean,soy protein,soy protein,product derived from other product,http://purl.obolibrary.org/obo/NCBITaxon_3847,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#14soy_protein
+Glycine max,soybean,soy protein,soy protein,product derived from other product,http://purl.obolibrary.org/obo/NCBITaxon_3847,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#1soy_protein
+Glycine max,soybean,soy protein,soy protein,product derived from other product,http://purl.obolibrary.org/obo/NCBITaxon_3847,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#4soy_protein
+Glycine max,soybean,soy protein,soy protein,product derived from other product,http://purl.obolibrary.org/obo/NCBITaxon_3847,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#5soy_protein
+Glycine max,soybean,soy protein,soy protein,product derived from other product,http://purl.obolibrary.org/obo/NCBITaxon_3847,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#6soy_protein
+Glycine max,soybean,soy protein isolate,isolated soy protein,product derived from other product,http://purl.obolibrary.org/obo/NCBITaxon_3847,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#14isolated_soy_protein
+Glycine max,soybean,soy protein rehydrated,rehydrated soy protein,product derived from other product,http://purl.obolibrary.org/obo/NCBITaxon_3847,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#11rehydrated_soy_protein
+Glycine max,soybean,soy chunks,soy chunks,product derived from other product,http://purl.obolibrary.org/obo/NCBITaxon_3847,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#8soy_chunks
+Glycine max,soybean,soy structure,soy structure,product derived from other product,http://purl.obolibrary.org/obo/NCBITaxon_3847,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#4soy_structure
+Glycine max,soybean,soy structure,soy structure,product derived from other product,http://purl.obolibrary.org/obo/NCBITaxon_3847,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#5soy_structure
+Glycine max,soybean,soy structure,soy structure,product derived from other product,http://purl.obolibrary.org/obo/NCBITaxon_3847,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#6soy_structure
+Cicer arietinum,chickpea,chickpea,chickpeas,product derived from other product,http://purl.obolibrary.org/obo/NCBITaxon_3827,https://data.rivm.nl/data/nvip/bigfood/leda/ingcode#7chickpeas
